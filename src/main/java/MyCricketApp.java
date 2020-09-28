@@ -9,5 +9,11 @@ public class MyCricketApp {
         Coach theCoach= applicationContext.getBean("myCoach", Coach.class);
         System.out.println(theCoach.getDailyFortune());
         System.out.println(theCoach.getDailyWorkout());
+
+
+        Coach trackCoach=applicationContext.getBean("trackCoach",Coach.class);
+
+        System.out.println(trackCoach.getDailyFortune());
+        System.out.println(trackCoach.getDailyWorkout());
     }
 }

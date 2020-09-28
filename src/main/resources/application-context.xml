@@ -6,7 +6,7 @@
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <!-- bean definitions here -->
-
+    <!-- constructor injection-->
     <bean id="myCoach"
           class="domain.CricketCoach">
         <constructor-arg ref="myFortune"/>
@@ -15,6 +15,12 @@
     <bean id="myFortune"
           class="domain.HappyFortune">
 
+    </bean>
+
+    <!--Setter injection  -->
+    <bean id="trackCoach"
+          class="domain.TrackCoach">
+        <property name="fortune" ref="myFortune"/>
     </bean>
 
 </beans>
